@@ -33,7 +33,7 @@ const Loading = () => {
     setTimeout(() => {
         let logoObj = document.getElementById("logo-obj");
         getSvgData(logoObj);
-    }, 100);
+    }, 1000);
 
     return (
         <>
