@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import loadingLogo_BLACK from "../../assets/loading-assets/loading-logo.svg";
-import loadingLogo_RED from "../../assets/loading-assets/loading-logo-original-with-text.svg";
+import loadingLogo_BLACK from "../../assets/main-assets/loading-logo.svg";
+import loadingLogo_RED from "../../assets/main-assets/loading-logo-original-with-text.svg";
 
 import "../../styles/loading-styles/loading.css";
 import $ from "jquery";
