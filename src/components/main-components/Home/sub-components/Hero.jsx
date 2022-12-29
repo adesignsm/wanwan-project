@@ -38,9 +38,9 @@ const Hero = () => {
         return (
             <>
                 <mesh scale={3} position={[0, 0, 0]}>
-                    <primitive ref={donutRef} scale={50} position={[0.8, 1.1, 0]} object={DONUT.scene} />
-                    <primitive ref={toppingBowlRef} scale={1} position={[-0.7, -2, 0]} object={TOPPINGBOWL.scene} /> {/*the towering bowl */}
-                    <primitive ref={torusBlushRef} scale={1} position={[-0.5, 2, 0]} object={TORUSBLUSH.scene} /> {/*the white bowl */}
+                    <primitive ref={donutRef} scale={50} position={[0.8, 1.1, 0]} object={DONUT.scene} /> {/*the donut vase*/}
+                    <primitive ref={toppingBowlRef} scale={1} position={[-0.7, -2, 0]} object={TOPPINGBOWL.scene} /> {/*the towering bowl*/}
+                    <primitive ref={torusBlushRef} scale={1} position={[-0.5, 2, 0]} object={TORUSBLUSH.scene} /> {/*the white bowl*/}
                 </mesh>
             </>
         )
@@ -53,7 +53,7 @@ const Hero = () => {
                     <object id = "hero-logo-obj" data={backgroundLogo} type="image/svg+xml" aria-label="main logo"/>
                 </div>
                 <div id = "hero-canvas-container">
-                    <Canvas camera={{position:[0, 0, -10]}}>
+                    <Canvas camera={{position:[0, 0, -12]}}>
                         <OrthographicCamera />
                         <ambientLight intensity={0.1} />
                         <Models />

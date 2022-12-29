@@ -3,6 +3,7 @@ import $ from "jquery";
 
 import Loading from "./components/misc-components/Loading";
 
+import Header from "./components/main-components/Header/Header";
 import Home from "./components/main-components/Home/Home";
 
 import "./styles/root-styles/root.css";
@@ -23,6 +24,7 @@ const App = () => {
     return (
         <>
             <Loading />
+            <Header />
             <Home />
         </>
     )

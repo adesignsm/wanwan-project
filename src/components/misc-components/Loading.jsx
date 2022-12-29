@@ -9,7 +9,7 @@ import $ from "jquery";
 const Loading = () => {
     const getSvgData = (svg) => {
         let svgDoc = svg.contentDocument;
-        let switchUrl = `http://localhost:3000${loadingLogo_RED}`;
+        let switchUrl = `http://localhost:3000${loadingLogo_RED}`; //switch the url out to the respective url
         let path1 = svgDoc.all[1], path2 = svgDoc.all[2], path3 = svgDoc.all[3];
 
         $(path1).delay(1000).animate({opacity: 1}, 1000);
@@ -39,7 +39,7 @@ const Loading = () => {
         <>
             <div id = "loading-screen">
                 <div id = "loading-logo">
-                    <object id = "logo-obj" data={loadingLogo_BLACK} type="image/svg+xml" />
+                    <object id = "logo-obj" data={loadingLogo_BLACK} type="image/svg+xml" alt="svg logo"/>
                 </div>
             </div>
         </>
