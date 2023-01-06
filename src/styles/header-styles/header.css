@@ -7,7 +7,7 @@
 
 h1 {
   color: rgba(237, 28, 36, 0.8);
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -18,8 +18,8 @@ p {
 }
 
 .italic {
- font-style: italic;
- font-weight: 500;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .header-content {
@@ -33,16 +33,11 @@ img {
   width: 25vw;
 }
 
-
 @media (max-width: 425px) {
   .header-content group {
-    display: none; 
-   }
-   img {
+    display: none;
+  }
+  img {
     margin-left: 25px;
   }
-}
-
-
-
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */

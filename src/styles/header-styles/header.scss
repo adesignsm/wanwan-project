@@ -3,3 +3,41 @@
     top: 0;
     left: 0;
 }
+
+h1 {
+    color: rgba(237, 28, 36, 0.8);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  
+  p {
+    color: var(--clr-primary-4);
+    margin: 0;
+  }
+  
+  .italic {
+   font-style: italic;
+   font-weight: 500;
+  }
+  
+  .header-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  img {
+    width: 25vw;
+  }
+  
+  
+  @media (max-width: 425px) {
+    .header-content group {
+      display: none; 
+     }
+     img {
+      margin-left: 25px;
+    }
+  }

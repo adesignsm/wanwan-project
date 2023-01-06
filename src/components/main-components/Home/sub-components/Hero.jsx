@@ -52,7 +52,8 @@ const Hero = () => {
                 <div id = "hero-logo">
                     <object id = "hero-logo-obj" data={backgroundLogo} type="image/svg+xml" aria-label="main logo"/>
                 </div>
-                <div id = "hero-canvas-container">
+
+                <div id = "hero-canvas-container" className="mobile-canvas">
                     <Canvas camera={{position:[0, 0, -12]}}>
                         <OrthographicCamera />
                         <ambientLight intensity={0.1} />

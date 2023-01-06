@@ -1,30 +1,30 @@
-/* /CUSTOM FONTS */
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #F3EDE9;
+}
 
+/* /CUSTOM FONTS */
 @font-face {
   font-family: Karla;
   src: url(../../assets/font-assets/Karla-Regular.ttf);
 }
-
-
 @font-face {
   font-family: Inter;
   src: url(../../assets/font-assets/Inter-Regular.ttf);
 }
-
 /*
 =============== 
 Variables
 ===============
 */
-
-
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(0,0,0);
-  --clr-primary-2: hsl(0,0,100);
-  --clr-primary-3: hsl(24, 29, 93); /*background*/
-  --clr-primary-4: hsl(356, 80, 42);
-  --clr-primary-5: hsl(358, 83, 60);
+  --clr-primary-2: hsl(0,0,100%);
+  --clr-primary-3: hsl(24, 27.8%, 92.9%); /*background*/
+  --clr-primary-4: hsl(356, 80.4%, 42%);
+  --clr-primary-5: hsl(358, 83.3%, 60%);
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -34,7 +34,6 @@ Variables
 Global Styles
 ===============
 */
-
 body, html {
   padding: 0;
   margin: 0;
@@ -44,13 +43,16 @@ body, html {
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 hr {
   border: none;
   border-top: 1px solid var(--clr-grey-8);
 }
+
 h1,
 h2,
 h3,
@@ -61,24 +63,30 @@ h5 {
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
+
 h1 {
   font-size: 2.5rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.5rem;
 }
+
 h4 {
   font-size: 1.25rem;
 }
+
 h5 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
-  /* color: var(--clr-grey-3); */
+  color: var(--clr-primary-4);
 }
 
 @media screen and (min-width: 800px) {
@@ -101,10 +109,10 @@ p {
     font-size: 1rem;
   }
   h1,
-  h2,
-  h3,
-  h4 {
+h2,
+h3,
+h4 {
     line-height: 1;
   }
 }
-/*# sourceMappingURL=root.css.map */
+/*# sourceMappingURL=root.css.map *//*# sourceMappingURL=root.css.map */

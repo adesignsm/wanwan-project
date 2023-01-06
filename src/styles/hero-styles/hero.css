@@ -13,6 +13,33 @@
   margin-top: -10vh;
   opacity: 0.6;
 }
+#hero-logo object {
+  width: 60vw;
+}
+
+#hero-canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+#hero-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-logo {
+  margin-top: -10vh;
+  opacity: 0.6;
+}
 
 #hero-logo object {
   width: 60vw;
@@ -24,4 +51,4 @@
   left: 0;
   height: 100vh;
   width: 100%;
-}/*# sourceMappingURL=hero.css.map */
+} /*# sourceMappingURL=hero.css.map *//*# sourceMappingURL=hero.css.map */
