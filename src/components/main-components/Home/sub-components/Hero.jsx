@@ -59,7 +59,7 @@ const Hero = () => {
                         <ambientLight intensity={0.1} />
                         <Models />
                         <Environment preset="sunset" />
-                        <OrbitControls enableZoom={true} />
+                        <OrbitControls enableZoom={false} />
                     </Canvas>
                 </div>
             </div>    

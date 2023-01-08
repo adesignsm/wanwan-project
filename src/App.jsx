@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import $ from "jquery";
 
-import Loading from "./components/misc-components/Loading";
+// import Loading from "./components/misc-components/Loading";
 
 import Header from "./components/main-components/Header/Header";
 import Home from "./components/main-components/Home/Home";
+import Menu from "./components/main-components/Header/sub-components/Menu";
 
 import "./styles/root-styles/root.css";
 
@@ -23,9 +24,10 @@ const App = () => {
 
     return (
         <>
-            <Loading />
+            {/* <Loading /> */}
             <Header />
             <Home />
+            <Menu/>
         </>
     )
 }
