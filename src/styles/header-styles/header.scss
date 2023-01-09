@@ -9,7 +9,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 25px;
 }
 
 .header-left-container {
@@ -44,6 +43,7 @@ h1 {
   }
 
   .right-header {
+    margin-right: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
