@@ -3,6 +3,7 @@ import Logo from "../../../assets/main-assets/loading-logo-original.svg"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useGlobalContext } from '../../../utils/context';
 import { links } from "../../../utils/constants";
+import CartButton from "./sub-components/CartButton";
 
 
 const Header = () => {
@@ -24,16 +25,8 @@ const Header = () => {
 
                 <button className="btn-toggle" onClick={openMenu}>
                     <RxHamburgerMenu/></button>
-
-                    {/* <ul>
-                        <li>
-                            <a href="">Cart(0)</a>
-                        </li>
-                        <li>
-                            <a href="">Contact</a>
-                        </li>
-                    </ul> */}
-               
+                            <CartButton/>
+                            <a href="">Contact</a>     
                 </div>
         </div>
         </>

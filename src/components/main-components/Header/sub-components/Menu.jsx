@@ -4,6 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../../../../utils/context';
 import { social, links } from '../../../../utils/constants';
 
+
 const Menu = () => {
 
   const { isMenuOpen, closeMenu } = useGlobalContext();

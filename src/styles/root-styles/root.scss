@@ -114,4 +114,22 @@ body, html {
     }
 
   }
+
+  /*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
   /*# sourceMappingURL=root.css.map */
