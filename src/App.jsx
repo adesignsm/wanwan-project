@@ -6,6 +6,7 @@ import $ from "jquery";
 import Header from "./components/main-components/Header/Header";
 import Home from "./components/main-components/Home/Home";
 import Menu from "./components/main-components/Header/sub-components/Menu";
+import Booking from "./components/main-components/Booking/Booking";
 
 import "./styles/root-styles/root.css";
 
@@ -26,7 +27,8 @@ const App = () => {
         <>
             {/* <Loading /> */}
             <Header />
-            <Home />
+            {/* <Home /> */}
+            <Booking />
             <Menu/>
         </>
     )
