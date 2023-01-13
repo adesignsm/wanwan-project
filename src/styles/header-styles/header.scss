@@ -5,10 +5,13 @@
 }
 
 .header-content {
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .header-left-container {
@@ -49,6 +52,10 @@ h1 {
     flex-direction: column;
   }
 
+  .right-header a {
+    color: red !important;
+  }
+
   .btn-toggle {
     background: transparent;
     border: transparent;
@@ -59,9 +66,6 @@ h1 {
     }
   }
 
-  // ul {
-  //   display: contents;
-  // }
 
   @media (max-width: 425px) {
     .mid-header {

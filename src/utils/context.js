@@ -4,6 +4,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
 
+// OPEN OR CLOSE SIDE MENU
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const openMenu = () => {
