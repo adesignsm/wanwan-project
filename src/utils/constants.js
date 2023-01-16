@@ -18,6 +18,16 @@ export const links = [
     text: 'GALLERY',
     url: '/gallery',
   },
+  {
+    id: 4,
+    text: 'CONTACT',
+    url: '/contact'
+  },
+  {
+    id: 5,
+    text: 'CART',
+    url: '/cart'
+  }
 ]
 
 export const social = [

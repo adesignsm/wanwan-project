@@ -8,10 +8,7 @@ const CartButton = () => {
   return (
    <div>
     <div className='cart-btn-wrapper'>
-      <a href="">Cart(0)</a>
-      <span className="cart-container">
-        {/* <span className='cart-value'>({total_items})</span> */}
-      </span>
+      <a href="">Cart</a>
    </div>
   </div>
   );
