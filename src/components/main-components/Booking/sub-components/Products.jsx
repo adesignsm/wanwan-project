@@ -51,6 +51,10 @@ const Products = () => {
 
         client.checkout.addLineItems(checkOutID, lineItemsToAdd).then((checkout) => {
             setFinalCheckout(checkout);
+            document.getElementById("validation-text").innerHTML = "Cart updated!";
+            document.getElementById("validation-text").style.display = "block";
+        }).catch(() => {
+            document.getElementById("validation-text").style.display = "block";
         })
     }
 
@@ -104,15 +108,13 @@ const Products = () => {
                         </ul>
                     </div>
                     <div className="product-function-buttons">
+                        <p id = "validation-text" style={{display: "none"}}> Please select a style </p>
                         <button id="add-to-cart-button" onClick={() => {handleAddToCart()}}> Add to cart </button>
                         <button id="go-to-checkout" onClick={() => {handleCheckout()}}> Checkout </button>
                     </div>
                 </div>
             </div>}
-
-            <div id = "cart-page" style={{display: "none"}}>
-                <CartPage data={finalCheckout} />
-            </div>                       
+            <div id = "cart-page" style={{display: "none"}}><CartPage data={finalCheckout} /></div>
         </>
     )
 }

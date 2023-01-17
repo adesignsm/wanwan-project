@@ -1,15 +1,36 @@
 import React, { useEffect, useState } from "react";
+import Client from "shopify-buy";
+import $ from "jquery";
+
+import "../../../styles/cart-styles/cart-page.css";
+
+const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
+const client = Client.buildClient({
+    domain: "itisstillgood.myshopify.com",
+    storefrontAccessToken: SHOPIFY_KEY
+});
 
 const CartPage = ({data}) => {
     const [cartData, setCartData] = useState([]);
     
     const fetchCheckOut = () => {
         setCartData(data);
-        console.log(Object.keys(cartData).length)
     }
 
     const handleCheckOut = () => {
         window.location.assign(data.webUrl);
+    }
+
+    const handleCloseCart = () => {
+        $("#cart-page").delay(100).animate({top: "100vh"}, 1000);
+    }
+
+    const reduceQuantity = (e) => {
+        console.log(e)
+    }
+
+    const increaseQuantity = (e) => {
+        console.log(e)
     }
 
     useEffect(() => {
@@ -18,7 +39,8 @@ const CartPage = ({data}) => {
 
     return (
         <>
-            <div id = "products-in-cart">
+            <div id = "products-in-cart" onClick={handleCloseCart}>
+                <button id = "close-cart"> X </button>
                 <div className="product-details">
                     <ul>
                         {Object.keys(cartData).length > 0 && cartData.lineItems.map((item) => {
@@ -26,7 +48,10 @@ const CartPage = ({data}) => {
                                 <li>
                                     <div>
                                         <p> {item.title} </p>
-                                        <p> {item.quantity}</p>
+                                        <p> {item.attrs.variant.title}</p>
+                                        <div>
+                                            <p id = "item-quantity">{item.quantity}</p>
+                                        </div>
                                     </div>
                                 </li>
                             )

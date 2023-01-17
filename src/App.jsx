@@ -26,7 +26,7 @@ const App = () => {
 
     return (
         <>
-            {/* <Loading /> */}
+             {/* <Loading /> */}
             <Header />
             {/* <Home /> */}
             <Booking />

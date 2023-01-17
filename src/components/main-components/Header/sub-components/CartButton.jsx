@@ -1,4 +1,5 @@
 import React from 'react';
+
 import "../../../../styles/cartbutton-styles/cartbutton.css";
 
 const CartButton = () => {
@@ -6,11 +7,11 @@ const CartButton = () => {
  
     
   return (
-   <div>
-    <div className='cart-btn-wrapper'>
-      <a href="">Cart</a>
-   </div>
-  </div>
+    <div>
+      <div className='cart-btn-wrapper'>
+        <a href="">Cart</a>
+      </div>
+    </div>
   );
 }
 

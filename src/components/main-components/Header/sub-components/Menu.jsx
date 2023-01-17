@@ -2,11 +2,8 @@ import React from 'react';
 import '../../../../styles/menu-styles/menu.css';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../../../../utils/context';
-import { social, links } from '../../../../utils/constants';
-
 
 const Menu = () => {
-
   const { isMenuOpen, closeMenu } = useGlobalContext();
 
   return (
@@ -17,26 +14,10 @@ const Menu = () => {
         </button>
       </div>
       <ul className='links'>
-        {links.map((link) => {
-          const { id, url, text} = link;
-          return (
-            <li key={id}>
-              <a href={url}>
-                {text}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-      <ul className='social-icons'>
-        {social.map((link) => {
-          const { id, url, icon } = link;
-          return (
-            <li key={id}>
-              <a href={url}>{icon}</a>
-            </li>
-          );
-        })}
+        <li> home </li>
+        <li> about </li>
+        <li> gallery </li>
+        <li> shop </li>
       </ul>
     </aside>
   );
