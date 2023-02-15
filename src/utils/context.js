@@ -14,7 +14,6 @@ const AppProvider = ({ children }) => {
     setIsMenuOpen(false);
   };
 
-
   return (
     <AppContext.Provider
       value={{

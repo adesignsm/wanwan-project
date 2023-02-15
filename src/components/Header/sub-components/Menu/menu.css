@@ -1,0 +1,118 @@
+.sidebar-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.close-btn {
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+  color: var(--clr-primary-1);
+  margin-top: 0.2rem;
+}
+
+.close-btn:hover {
+  color: var(--clr-primary-3);
+}
+
+.logo {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 40px;
+}
+
+.links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  padding: 1rem 1.5rem;
+  color: var(--clr-primary-1);
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+.links a:hover {
+  background: Black;
+  color: var(--clr-primary-3);
+}
+
+.links a svg {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  margin-right: 1rem;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.links a:hover svg {
+  color: var(--clr-primary-4);
+}
+
+.social-icons {
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: var(--clr-primary-1);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--clr-primary-3);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-4);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  row-gap: 1rem;
+  -webkit-box-shadow: var(--clr-primary-2);
+          box-shadow: var(--clr-primary-2);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+}
+
+.show-sidebar {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+@media screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+  }
+}
+/*# sourceMappingURL=menu.css.map */

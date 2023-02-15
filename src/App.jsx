@@ -4,12 +4,11 @@ import $ from "jquery";
 
 import Loading from "./components/misc-components/Loading";
 
-import Header from "./components/main-components/Header/Header";
-import Home from "./components/main-components/Home/Home";
-import Menu from "./components/main-components/Header/sub-components/Menu";
-// import Booking from "./components/main-components/Booking/Booking";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Menu from "./components/Header/sub-components/Menu";
 
-import "./styles/root-styles/root.css";
+import "./root.css";
 
 const App = () => {
     const [loadingStatus, setLoadingStatus] = useState(true);
