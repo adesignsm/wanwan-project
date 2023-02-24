@@ -35,69 +35,52 @@ import torusBlushModel from "../../assets/model-assets/TorusBlush.glb";
           <>
             <div id="hero-container">
               <div id="hero-logo">
-                <object
-                  id="hero-logo-obj"
-                  data={backgroundLogo}
-                  type="image/svg+xml"
-                  aria-label="main logo"
-                />
+                <object id="hero-logo-obj" data={backgroundLogo} type="image/svg+xml" aria-label="main logo" />
               </div>
       
               <div id="hero-canvas-container">
-                
                 <div className="models-container">
-             
-                <div className="model-column">
-                <Canvas camera={{ position: [0, 0, -12] }}>
-                  <OrthographicCamera />
-                  <ambientLight intensity={0.1} />
-                  <Suspense fallback={null}>
-                    <Model model={toppingBowlModel} position={[0, -4, -2]} scale={6}/>
-                  </Suspense>
-                  <Environment preset="sunset" />
-                  <OrbitControls enableZoom={false} />
-                </Canvas>
+                  <div className="model-column">
+                    <Canvas camera={{ position: [0, 0, -12] }}>
+                      <OrthographicCamera />
+                      <ambientLight intensity={0.1} />
+                      <Suspense fallback={null}>
+                        <Model model={toppingBowlModel} position={[0, -4, -2]} scale={6}/>
+                      </Suspense>
+                      <Environment preset="sunset" />
+                      <OrbitControls enableZoom={false} />
+                    </Canvas>
+                  </div>
+                  <div className="model-column">
+                    <Canvas camera={{ position: [0, 0, -12] }}>
+                      <OrthographicCamera />
+                      <ambientLight intensity={0.1} />
+                      <Suspense fallback={null}>
+                        <Model model={torusBlushModel} position={[0, 0, 0]} scale={10}/>
+                      </Suspense>
+                      <Environment preset="sunset" />
+                      <OrbitControls enableZoom={false} />
+                    </Canvas>
+                  </div>
+                  <div className="model-column">
+                    <Canvas camera={{ position: [0, 0, -12] }}>
+                      <OrthographicCamera />
+                      <ambientLight intensity={0.1} />
+                      <Suspense fallback={null}>
+                        <Model model={donutModel} position={[0, 0, 0]} scale={400} />
+                      </Suspense>
+                      <Environment preset="sunset" />
+                      <OrbitControls enableZoom={false} />
+                    </Canvas>
+                  </div>
                 </div>
-
-
-                <div className="model-column">
-                <Canvas camera={{ position: [0, 0, -12] }}>
-                  <OrthographicCamera />
-                  <ambientLight intensity={0.1} />
-                  <Suspense fallback={null}>
-                    <Model model={torusBlushModel} position={[0, 0, 0]} scale={10}/>
-                  </Suspense>
-                  <Environment preset="sunset" />
-                  <OrbitControls enableZoom={false} />
-                </Canvas>
-                </div>
-
-
-                <div className="model-column">
-                <Canvas camera={{ position: [0, 0, -12] }}>
-                  <OrthographicCamera />
-                  <ambientLight intensity={0.1} />
-                  <Suspense fallback={null}>
-                    <Model model={donutModel} position={[0, 0, 0]} scale={400} />
-                  </Suspense>
-                  <Environment preset="sunset" />
-                  <OrbitControls enableZoom={false} />
-                </Canvas>
-                </div>
-
-
-                <div className="model-column">
+              </div>
+              <div className="hero-description-column">
                   <div>
                     <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugiat nulla veniam!</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque adipisci dolor incidunt.</p>
                   </div>
-                </div>
-                    
-                    
-                    </div>
-                
               </div>
-              
             </div>
           </>
         );

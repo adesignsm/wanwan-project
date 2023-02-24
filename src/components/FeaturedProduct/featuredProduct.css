@@ -1,28 +1,25 @@
-h1 {
-  font-weight: 800;
+#featured-product-container h1 {
+  font-weight: bolder;
 }
-
-h3 {
-  font-weight: 800;
+#featured-product-container h4, #featured-product-container h3 {
   color: var(--clr-primary-5);
+}
+#featured-product-container h4 {
+  font-weight: normal;
 }
 
 #featured-product-container {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .box-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  margin: 1.5rem;
+  display: flex;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 
 .box-column {
@@ -30,6 +27,23 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  width: 50vw;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box-column:nth-child(2) {
+  background-color: rgba(243, 237, 233, 0.8);
+  padding: 0 2rem;
+}
+.box-column:nth-child(2) .primary-product-info {
+  width: 30vw;
+}
+.box-column:nth-child(2) .secondary-product-info {
+  width: 30vw;
+}
+.box-column:nth-child(2) .secondary-product-info ul {
+  padding: 0;
 }
 
 .btn {
@@ -41,8 +55,44 @@ h3 {
   height: 45px;
 }
 
-@media (max-width: 425px) {
+@media only screen and (min-width: 390px) and (max-width: 690px) {
   .box-container {
     grid-template-columns: 1fr;
+  }
+  #featured-product-container {
+    background-color: #fff;
+    opacity: 0.9;
+    border-radius: 15px;
+    text-align: center;
+    margin: 1rem;
+  }
+  #featured-product-container .box-container {
+    display: grid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    -webkit-backdrop-filter: blur(15px);
+    -moz-backdrop-filter: blur(15px);
+    -ms-backdrop-filter: blur(15px);
+    -o-backdrop-filter: blur(15px);
+  }
+  #featured-product-container .box-container .box-column {
+    width: 100%;
+    padding: 0;
+  }
+  #featured-product-container .box-container .box-column:nth-child(1) {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  #featured-product-container .box-container .box-column:nth-child(2) {
+    justify-content: start;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  #featured-product-container .box-container .box-column .primary-product-info {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  #featured-product-container .box-container .box-column .secondary-product-info {
+    width: 100%;
   }
 }/*# sourceMappingURL=featuredProduct.css.map */

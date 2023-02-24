@@ -1,76 +1,77 @@
 #hero-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
 }
 
 #hero-logo {
-    margin-top: -10vh;
-    opacity: 0.6;
+  position: fixed;
+  top: 0vh;
+  left: 0;
+    opacity: 0.5;
     object {
-        width: 60vw;
+        width: 100vw;
     }
 }
 
-#hero-canvas-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%; 
-}
-
 #hero-container {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #hero-logo {
-    margin-top: -10vh;
-    opacity: 0.6;
-  }
-  
-  #hero-logo object {
-    width: 60vw;
-  }
-  
-  #hero-canvas-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
+    margin-top: 10vh;
+    padding: 1rem;
   }
   
   .models-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 20px;
-    margin: 1.5rem;
+    grid-column-gap: 10rem;
   }
   
   .model-column {
     display: flex;
     justify-content: center;
-    // margin: auto 0;
+    height: 50vh;
   }
 
+  .hero-description-column {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    width: 30%;
+  }
 
-  @media (max-width: 425px) {
+  @media only screen and (min-width: 390px) and (max-width: 690px) {
+    #hero-container {
+      display: grid;
+      padding: 1rem;
+      margin-bottom: 5rem;
+      margin-top: 0;
+
+      #hero-logo {
+        top: 10vh;
+      }
+    }
+
     .models-container {
       grid-template-columns: 1fr;
     }
-  }/*# sourceMappingURL=hero.css.map */
+
+    #hero-canvas-container .models-container .model-column:nth-child(1) {
+      height: calc(100vh / 2)
+    }
+
+    #hero-canvas-container .models-container .model-column:nth-child(2),
+    #hero-canvas-container .models-container .model-column:nth-child(3) {
+      display: none;
+    }
+
+    .hero-description-column {
+      text-align: center;
+      background-color: #fff;
+      opacity: 0.9;
+      border-radius: 20px;
+      width: 90%;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
 
   

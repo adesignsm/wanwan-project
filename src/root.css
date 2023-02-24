@@ -36,8 +36,8 @@ Global Styles
 */
 body, html {
   padding: 0;
-  margin: 0;
   background-color: #F3EDE9;
+  overflow-x: hidden;
 }
 
 ul {
@@ -131,5 +131,4 @@ p {
   .section-center {
     width: 95vw;
   }
-}
-/*# sourceMappingURL=root.css.map */
+}/*# sourceMappingURL=root.css.map */
