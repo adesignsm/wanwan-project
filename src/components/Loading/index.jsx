@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import loadingLogo_BLACK from "../../assets/main-assets/loading-logo.svg";
 import loadingLogo_RED from "../../assets/main-assets/loading-logo-original-with-text.svg";
 
-import "../../styles/loading-styles/loading.css";
+import "../Loading/loading.css";
 import $ from "jquery";
 
 const Loading = () => {

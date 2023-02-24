@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-
 import $ from "jquery";
-
-import Loading from "./components/misc-components/Loading";
-
+// import Loading from "./components/Loading/index.jsx";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Menu from "./components/Header/sub-components/Menu";
-
 import "./root.css";
 
 const App = () => {
@@ -25,7 +21,7 @@ const App = () => {
 
     return (
         <>
-            <Loading />
+            {/* <Loading /> */}
             <Header />
             <Home />
             <Menu/>

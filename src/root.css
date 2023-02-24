@@ -9,23 +9,20 @@ body, html {
   font-family: Karla;
   src: url(./assets/font-assets/Karla-Regular.ttf);
 }
-
 @font-face {
   font-family: Inter;
   src: url(./assets/font-assets/Inter-Regular.ttf);
 }
-
 /*
-  =============== 
-  Variables
-  ===============
-  */
+=============== 
+Variables
+===============
+*/
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(0,0,0%);
   --clr-primary-2: hsl(0,0,100%);
-  --clr-primary-3: hsl(24, 27.8%, 92.9%);
-  /*background*/
+  --clr-primary-3: hsl(24, 27.8%, 92.9%); /*background*/
   --clr-primary-4: hsl(356, 80.4%, 42%);
   --clr-primary-5: hsl(358, 83.3%, 60%);
   --max-width: 1170px;
@@ -33,10 +30,10 @@ body, html {
 }
 
 /*
-  =============== 
-  Global Styles
-  ===============
-  */
+=============== 
+Global Styles
+===============
+*/
 body, html {
   padding: 0;
   margin: 0;
@@ -118,7 +115,6 @@ p {
     line-height: 1;
   }
 }
-
 /*  global classes */
 /* section */
 .section {

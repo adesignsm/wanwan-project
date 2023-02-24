@@ -11,58 +11,96 @@ import donutModel from "../../assets/model-assets/DonutVase.glb";
 import toppingBowlModel from "../../assets/model-assets/ToppingBowl.glb";
 import torusBlushModel from "../../assets/model-assets/TorusBlush.glb";
 
-const Hero = () => {
-    const Models = () => {
-        const donutRef = useRef();
-        const toppingBowlRef = useRef();
-        const torusBlushRef = useRef();
-
-        const DONUT = useGLTF(donutModel);
-        const TOPPINGBOWL = useGLTF(toppingBowlModel);
-        const TORUSBLUSH = useGLTF(torusBlushModel);
-
-        useFrame(({clock}) => {
-            let interval = clock.getElapsedTime();
-            donutRef.current.rotation.y = interval / 2;
-            donutRef.current.rotation.x = interval / 2;
-
-            toppingBowlRef.current.rotation.y = -interval / 2;
 
 
-            torusBlushRef.current.rotation.x = interval / 2;
-            torusBlushRef.current.rotation.y = interval / 2;
+    const Model = ({model, position, scale}) => {
+
+        const modelRef = useRef();
+        const gltf = useGLTF(model);
+        useFrame(({ clock }) => {
+          modelRef.current.rotation.y = clock.elapsedTime / 2;
         });
 
         return (
-            <>
-                <mesh scale={3} position={[0, 0, 0]}>
-                    <primitive ref={donutRef} scale={50} position={[0.8, 1.1, 0]} object={DONUT.scene} /> {/*the donut vase*/}
-                    <primitive ref={toppingBowlRef} scale={1} position={[-0.7, -2, 0]} object={TOPPINGBOWL.scene} /> {/*the towering bowl*/}
-                    <primitive ref={torusBlushRef} scale={1} position={[-0.5, 2, 0]} object={TORUSBLUSH.scene} /> {/*the white bowl*/}
-                </mesh>
-            </>
-        )
-    }
+          <mesh position={position} scale={scale}>
+            <primitive ref={modelRef} object={gltf.scene} />
+          </mesh>
+        );
+      };
 
-    return (
-        <>
-            <div id = "hero-container">
-                <div id = "hero-logo">
-                    <object id = "hero-logo-obj" data={backgroundLogo} type="image/svg+xml" aria-label="main logo"/>
+
+
+      const Hero = () => {
+        return (
+          <>
+            <div id="hero-container">
+              <div id="hero-logo">
+                <object
+                  id="hero-logo-obj"
+                  data={backgroundLogo}
+                  type="image/svg+xml"
+                  aria-label="main logo"
+                />
+              </div>
+      
+              <div id="hero-canvas-container">
+                
+                <div className="models-container">
+             
+                <div className="model-column">
+                <Canvas camera={{ position: [0, 0, -12] }}>
+                  <OrthographicCamera />
+                  <ambientLight intensity={0.1} />
+                  <Suspense fallback={null}>
+                    <Model model={toppingBowlModel} position={[0, -4, -2]} scale={6}/>
+                  </Suspense>
+                  <Environment preset="sunset" />
+                  <OrbitControls enableZoom={false} />
+                </Canvas>
                 </div>
 
-                <div id = "hero-canvas-container" className="mobile-canvas">
-                    <Canvas camera={{position:[0, 0, -12]}}>
-                        <OrthographicCamera />
-                        <ambientLight intensity={0.1} />
-                        <Models />
-                        <Environment preset="sunset" />
-                        <OrbitControls enableZoom={false} />
-                    </Canvas>
-                </div>
-            </div>    
-        </>
-    )
-}
 
-export default Hero;
+                <div className="model-column">
+                <Canvas camera={{ position: [0, 0, -12] }}>
+                  <OrthographicCamera />
+                  <ambientLight intensity={0.1} />
+                  <Suspense fallback={null}>
+                    <Model model={torusBlushModel} position={[0, 0, 0]} scale={10}/>
+                  </Suspense>
+                  <Environment preset="sunset" />
+                  <OrbitControls enableZoom={false} />
+                </Canvas>
+                </div>
+
+
+                <div className="model-column">
+                <Canvas camera={{ position: [0, 0, -12] }}>
+                  <OrthographicCamera />
+                  <ambientLight intensity={0.1} />
+                  <Suspense fallback={null}>
+                    <Model model={donutModel} position={[0, 0, 0]} scale={400} />
+                  </Suspense>
+                  <Environment preset="sunset" />
+                  <OrbitControls enableZoom={false} />
+                </Canvas>
+                </div>
+
+
+                <div className="model-column">
+                  <div>
+                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium fugiat nulla veniam!</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque adipisci dolor incidunt.</p>
+                  </div>
+                </div>
+                    
+                    
+                    </div>
+                
+              </div>
+              
+            </div>
+          </>
+        );
+      };
+      
+      export default Hero;

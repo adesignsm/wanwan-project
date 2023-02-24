@@ -1,21 +1,14 @@
 #header-container {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
 .header-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: -webkit-sticky;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   left: 0;
@@ -23,26 +16,25 @@
 
 .header-left-container {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 25px;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   color: var(--clr-primary-5);
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
-  margin-bottom: 0;
 }
 
-p {
+.navigation-container p {
   color: var(--clr-primary-4);
   margin: 0;
 }
@@ -58,16 +50,9 @@ img {
 
 .right-header {
   margin-right: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
 
 .right-header a {
@@ -75,12 +60,12 @@ img {
 }
 
 .btn-toggle {
+  margin-top: 0.5rem;
   background: transparent;
   border: transparent;
   color: var(--clr-primary-1);
   cursor: pointer;
 }
-
 .btn-toggle svg {
   font-size: 2rem;
 }
@@ -93,5 +78,4 @@ img {
     width: 75px;
     margin-left: 25px;
   }
-}
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */
