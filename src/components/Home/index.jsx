@@ -1,4 +1,6 @@
 import Hero from "..//Hero";
+import About from "..//About";
+import Footer from "..//Footer";
 import FeaturedProduct from "../FeaturedProduct";
 
 const Home = () => {
@@ -6,6 +8,8 @@ const Home = () => {
         <>
             <Hero />
             <FeaturedProduct />
+            <About />
+            <Footer />
         </>
     )
 }
