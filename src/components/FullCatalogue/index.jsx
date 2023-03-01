@@ -9,12 +9,15 @@ const client = Client.buildClient({
     storefrontAccessToken: SHOPIFY_KEY
 });
 
+
+
 const FullCatalogue = () => {
     const [productData, setProductData] = useState([]);
 
     useLayoutEffect(() => {
         client.product.fetchAll().then((products) => {
             setProductData(products);
+            // console.log(client);
         }).catch((err) => {
             console.error(err);
         })

@@ -102,6 +102,18 @@ textarea::placeholder {
   color: black;
 }
 
+.copyright__content {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 10px;
+}
+.copyright__content a {
+  text-decoration: none;
+}
+.copyright__content a:link {
+  color: black;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 690px) {
   .footer-box-container {
     display: grid;
