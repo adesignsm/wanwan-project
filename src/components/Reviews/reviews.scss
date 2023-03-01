@@ -1,0 +1,26 @@
+#reviews-container {
+    background-color: #F3EDE9;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .reviews-container .review-counter h1 {
+        margin-top: 0;
+        margin-bottom: 5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .review-title {
+        text-transform: uppercase; 
+        font-weight: 900;
+     }
+
+    .review-row:last-child {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
