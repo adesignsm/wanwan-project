@@ -1,46 +1,52 @@
-import React from "react";
+import React, {useLayoutEffect, useState} from "react";
 import "./featuredProduct.css";
-import product_logo from "../../assets/main-assets/left_side_content.svg";
+
+import Client from "shopify-buy";
+
+const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
+
+const client = Client.buildClient({
+    domain: "itisstillgood.myshopify.com",
+    storefrontAccessToken: SHOPIFY_KEY
+});
 
 const FeaturedProduct = () => {
+    const [collectionData, setCollectionData] = useState([]);
+    
+    useLayoutEffect(() => {
+        client.collection.fetchAllWithProducts().then((collections) => {
+            collections.forEach((collection) => {
+                if (collection.title === "Featured Products") {
+                    setCollectionData(collection.products);
+                }
+            })
+        }).catch((err) => {
+            console.log(err);
+        })
+    }, []);
 
     return (
         <div id="featured-product-container">
-            <div className="box-container">
-                <div className="box-column">
-                    <img src={product_logo} alt="product image"/>
-                </div>
-
-                <div className="box-column">
-                    <div className="primary-product-info">
-                        <h1>Product title</h1>
-                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Sit commodi magnam debitis? 
-                            Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Nobis asperiores dicta modi.
-                        </h4>
+            {collectionData.length > 0 &&
+                <div className="box-container">
+                    <div className="box-column">
+                        <img className="featured-product-image" src={collectionData[0].images[0].src} alt="product image"/>
                     </div>
 
-                    <div className="secondary-product-info">
-                        <ul>
-                            <li>
-                                <h3>product info title</h3>
-                                <p>prodcut detail list point</p>
-                            </li>
-                            <li>
-                                <h3>product info title</h3>
-                                <p>prodcut detail list point</p>
-                            </li>
-                            <li>
-                                <h3>product info title</h3>
-                                <p>prodcut detail list point</p>
-                            </li>
-                        </ul>
-                        <button className="btn">ADD TO CART</button>
+                    <div className="box-column">
+                        <div className="primary-product-info">
+                            <h1>{collectionData[0].title}</h1>
+                            <h4 dangerouslySetInnerHTML={{__html: collectionData[0].descriptionHtml}} />
+                        </div>
+
+                        <div className="secondary-product-info">
+                            <a href={collectionData[0].onlineStoreUrl} target="_blank">
+                                <button className="btn">BUY NOW</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-            </div>
+            }
         </div>
     );
 };

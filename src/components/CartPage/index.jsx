@@ -1,41 +1,33 @@
 import React, { useEffect, useState } from "react";
-import Client from "shopify-buy";
 import $ from "jquery";
 
 import "../../../styles/cart-styles/cart-page.css";
 
-const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
-
-const client = Client.buildClient({
-    domain: "itisstillgood.myshopify.com",
-    storefrontAccessToken: SHOPIFY_KEY
-});
-
 const CartPage = ({data}) => {
     const [cartData, setCartData] = useState([]);
     
-    const fetchCheckOut = () => {
-        setCartData(data);
-    }
+    // const fetchCheckOut = () => {
+    //     setCartData(data);
+    // }
 
-    const handleCheckOut = () => {
-        window.location.assign(data.webUrl);
-    }
+    // const handleCheckOut = () => {
+    //     window.location.assign(data.webUrl);
+    // }
 
-    const handleCloseCart = () => {
-        $("#cart-page").delay(100).animate({top: "100vh"}, 1000);
-    }
+    // const handleCloseCart = () => {
+    //     $("#cart-page").delay(100).animate({top: "100vh"}, 1000);
+    // }
 
-    const reduceQuantity = (e) => {
-        console.log(e)
-    }
+    // const reduceQuantity = (e) => {
+    //     console.log(e)
+    // }
 
-    const increaseQuantity = (e) => {
-        console.log(e)
-    }
+    // const increaseQuantity = (e) => {
+    //     console.log(e)
+    // }
 
     useEffect(() => {
-        fetchCheckOut()
+        // fetchCheckOut()
     });
 
     return (

@@ -1,0 +1,22 @@
+#testimonial-container {
+    font-family: 'Karla', sans-serif;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .box-column {
+        text-align: center;
+    }
+
+    .box-column:nth-child(1) {
+        background-color: #F3EDE9;
+    }
+
+    .box-column:nth-child(2) {
+        background-color: #C21521;
+
+        p {
+            color: #000;
+        }
+    }
+}

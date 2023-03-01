@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./header.css";
 import Logo from "../../assets/main-assets/loading-logo-original.svg"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useGlobalContext } from '../../utils/context';
-import { NavLink } from "react-router-dom";
 
 import $ from "jquery";
 
 const Header = () => {
-    const [cartIsOpen, setCartIsOpen] = useState(false);
     const { openMenu } = useGlobalContext();
-
-    const handleCartLink = () => {
-        $("#cart-page").delay(100).animate({top: "50vh"}, 1000);
-    }
 
     return (
         <>
@@ -24,16 +18,9 @@ const Header = () => {
                         <h1>WAN WAN <span className="italic">CERAMICS</span></h1>
                         <p>A one liner outlining wan wan ceramics</p>
                     </div>
-                </div>
-                        
-                <div className="right-header">
-                    <button className="btn-toggle" onClick={openMenu}><RxHamburgerMenu/></button>
-                    <nav role="navigation" aria-label="aria-label">
-                        <div className="navigation-container">
-                            <p onClick={handleCartLink}>Cart</p>
-                            <p>Contact</p>
-                        </div>
-                    </nav>
+                    <div className="right-header">
+                        <button className="btn-toggle" onClick={openMenu}><RxHamburgerMenu/></button>
+                    </div>
                 </div>
             </div>
         </>
