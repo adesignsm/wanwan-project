@@ -28,19 +28,28 @@ const Reviews = () => {
     return (
         <>
             <div id="reviews-container">
+                <div className="review-counter">
+                    <h1> {reviewData.length} reviews </h1>
+                </div>
                 {reviewData.length > 0 &&
                     <div className="reviews-container">
-                        <div className="review-counter">
-                            <h1> {reviewData.length} reviews </h1>
-                        </div>
                         <div className="reviews">
                             {reviewData.map((review) => {
                                 return (
                                     <div className="review-row">
-                                        <h1 className="review-title">{review.title}</h1>
-                                        <h3 className="review-score">{review.name} gave a score of {review.score}</h3>
-                                        <h2 className="review-content">{review.content}</h2>
-                                        <h3 className="review-date">{review.created_at}</h3>
+                                        <div className="review-sub-row">
+                                            <label> Review Title </label>
+                                            <h1 className="review-title">{review.title}</h1>
+                                        </div>
+                                        <div className="review-sub-row">
+                                            <label> Score </label>
+                                            <h3 className="review-score">{review.name} gave a score of {review.score}</h3>
+                                        </div>
+                                        <div className="review-sub-row">
+                                            <label> Review </label>
+                                            <h2 className="review-content">"{review.content}"</h2>
+                                            <label className="review-date"> Review created on {review.created_at.replace("T", " at ").replace(".000Z", "")}</label>
+                                        </div>
                                     </div>
                                 )
                             })}

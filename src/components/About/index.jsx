@@ -6,7 +6,6 @@ const About = () => {
     const [feed, setFeed] = useState([]);
 
     useEffect(() => {
-
         const userFeed = new Instafeed({
           get: 'user',
           limit: 9,
@@ -23,13 +22,9 @@ const About = () => {
         });
         userFeed.run();
       }, []);
-      
-
-    
 
     return (
-
-<div id="about-container">
+      <div id="about-container">
         <div className="about-box-container">
             <div className="about-box-column">
                 <div className="primary-about-info">
@@ -50,19 +45,19 @@ const About = () => {
             </div>
             <div className="about-box-column">
                 <div className="mini-column">
-                <div id="instafeed-container" className="slide-down-loop">
-                {feed.map((item) => (
-              <img
-                key={item.id}
-                src={item.getAttribute("src")}
-                alt={item.getAttribute("alt")}
-              />
-            ))}
-                </div>
+                  <div id="instafeed-container" className="slide-down-loop">
+                    {feed.map((item) => (
+                      <img
+                        key={item.id}
+                        src={item.getAttribute("src")}
+                        alt={item.getAttribute("alt")}
+                      />
+                    ))}
+                  </div>
                 </div>  
             </div>
         </div>
-</div>
+      </div>
     )
 }
 
