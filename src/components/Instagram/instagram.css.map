@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"instagram.css"}
+{"version":3,"sources":["instagram.scss","instagram.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,oBAAA;OAAA,eAAA;EACA,kBAAA;OAAA,aAAA;EACD,WAAA;EACA,aAAA;ACCH;ADCG;EACC,YAAA;EACA,sCAAA;ACCJ;;ADGE,iCAAA;AACF;EACI,UAAA;EACA,4BAAA;ACAJ;;ADGE,qBAAA;AACA;EACE,+CAAA;ACAJ;;ADGE,+BAAA;AACA;EACE;IACE,UAAA;IACA,4BAAA;ECAJ;EDEE;IACE,UAAA;IACA,wBAAA;ECAJ;AACF","file":"instagram.css"}

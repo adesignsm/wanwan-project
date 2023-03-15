@@ -43,20 +43,6 @@
   gap: 2rem;
 }
 
-#instafeed-container {
-  position: relative;
-  -moz-column-count: 3;
-       column-count: 3;
-  -moz-column-gap: 1;
-       column-gap: 1;
-  width: auto;
-  height: 700px;
-}
-#instafeed-container img {
-  width: 200px;
-  border: 5px solid var(--clr-primary-5);
-}
-
 @media only screen and (min-width: 320px) and (max-width: 690px) {
   .about-box-container {
     display: grid;

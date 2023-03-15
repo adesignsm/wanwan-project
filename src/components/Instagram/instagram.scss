@@ -1,0 +1,35 @@
+#instafeed-container {
+    position: relative;
+    column-count: 3;
+    column-gap: 1;
+   width: auto;
+   height: 700px;
+
+   img {
+    width: 200px;
+    border: 5px solid var(--clr-primary-5);
+   }
+  }
+
+  /* Set initial state for images */
+#instafeed-container img {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  
+  /* Set up animation */
+  #instafeed-container img {
+    animation: slide-down 0.5s ease-in-out forwards;
+  }
+  
+  /* Define animation keyframes */
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
