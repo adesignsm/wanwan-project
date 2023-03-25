@@ -43,10 +43,11 @@
 }
 
 .mini-column {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-gap: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh; /* Adjust this value based on the desired height of the container */
+    overflow: hidden;
 }
 
 
