@@ -1,43 +1,20 @@
-#column-1 img {
-  height: 200px;
-  width: 150px;
-  margin: 6px;
-  border: 5px solid var(--clr-primary-5);
+#column-1, #column-2, #column-3 {
+  overflow: hidden;
+  position: relative;
 }
 
-#column-2 img {
-  height: 200px;
-  width: 150px;
-  margin: 6px;
-  border: 5px solid var(--clr-primary-5);
+.wrapper::after {
+  content: "";
 }
 
-#column-3 img {
-  height: 200px;
-  width: 150px;
-  margin: 6px;
-  border: 5px solid var(--clr-primary-5);
+.feed-item {
+  position: relative;
 }
 
-/* Set initial state for images */
-#instagram-container img {
-  opacity: 0;
-  transform: translateY(-50px);
+#column-1 img, #column-2 img, #column-3 img {
+  width: 100%;
 }
 
-/* Set up animation */
-#instagram-container img {
-  animation: slide-down 0.5s ease-in-out forwards;
-}
-
-/* Define animation keyframes */
-@keyframes slide-down {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#column-1 div, #column-2 div, #column-3 div {
+  display: block;
 }/*# sourceMappingURL=instagram.css.map */

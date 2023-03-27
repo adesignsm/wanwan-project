@@ -18,7 +18,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
 }
@@ -39,9 +38,8 @@
 .mini-column {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  height: 100vh; /* Adjust this value based on the desired height of the container */
   overflow: hidden;
+  width: 100%;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 690px) {
