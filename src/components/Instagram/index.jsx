@@ -80,7 +80,7 @@ const Instagram = () => {
         gsap.to(".feed-item.column-2", {
           duration: 20,
           ease: "none",
-          y: "+=400", //move each box 500px up
+          y: "+=500", //move each box 500px up
           modifiers: {
             y: gsap.utils.unitize(y => parseFloat(y) % 500) //force y value to be between 0 and 500 using modulus
           },

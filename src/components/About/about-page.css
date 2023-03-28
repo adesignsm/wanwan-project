@@ -45,10 +45,12 @@
 @media only screen and (min-width: 320px) and (max-width: 690px) {
   .about-box-container {
     display: grid;
-    grid-template-columns: 1fr;
     height: auto; /* remove the fixed height */
   }
   .about-box-column {
     width: 100%; /* take up the full width of the container */
+  }
+  .mini-column {
+    display: none;
   }
 }/*# sourceMappingURL=about-page.css.map */

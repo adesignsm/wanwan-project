@@ -55,4 +55,12 @@
 }
 #reviews-container .review-sub-row h1, #reviews-container .review-sub-row h3, #reviews-container .review-sub-row h2 {
   margin-top: 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 690px) {
+  #reviews-container .reviews {
+    flex-direction: row;
+    align-items: center;
+    padding: 2.5rem;
+  }
 }/*# sourceMappingURL=reviews.css.map */
