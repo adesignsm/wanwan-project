@@ -12,9 +12,10 @@
 .header-left-container {
   position: relative;
   display: flex;
+  z-index: 99;
   align-items: center;
   justify-content: space-between;
-  margin: 0 25px;
+  mix-blend-mode: difference;
 }
 
 .navigation-container {
@@ -68,11 +69,11 @@ h1 {
   }
 
 
-  @media only screen and (min-width: 320px) and (max-width: 425px) {
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
     .mid-header {
       display: none; 
      }
-     img {
+     .header-content img {
       width: 75px;
       margin-left: 25px;
     }

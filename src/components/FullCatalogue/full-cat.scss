@@ -1,7 +1,7 @@
     #full-catalogue-container {
         position: relative;
         backdrop-filter: blur(15px);
-        overflow-y: scroll;
+        overflow-y: hidden;
 
         .products-container {
             display: flex;
@@ -51,7 +51,7 @@
     #full-catalogue-container {
         position: relative;
         backdrop-filter: blur(15px);
-        overflow-y: scroll;
+        overflow-y: hidden;
     
         .products-container {
             display: flex;

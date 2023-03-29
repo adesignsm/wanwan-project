@@ -9,11 +9,43 @@ import $ from "jquery";
 const Header = () => {
     const { openMenu } = useGlobalContext();
 
+    let prevScrollPos = window.pageYOffset;
+
+    if (window.innerWidth >= 690) {
+        window.onscroll = () => {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos < currentScrollPos) {
+                $(".header-content").stop().animate({marginTop: "-15vh"}, 300);
+            } else {
+                $(".header-content").stop().animate({marginTop: "0vh"}, 300);
+            }
+
+            prevScrollPos = currentScrollPos;
+        }
+    }
+
+    if (window.innerWidth <= 690) {
+        window.ontouchmove = () => {
+            let currentScrollPos = window.pageYOffset;
+    
+            if (prevScrollPos < currentScrollPos) {
+                $(".header-content").stop().animate({marginTop: "-15vh"}, 300);
+            } else {
+                $(".header-content").stop().animate({marginTop: "0vh"}, 300);
+            }
+    
+            prevScrollPos = currentScrollPos;
+        }
+    }
+
     return (
         <>
             <div className="header-content">
                 <div className="header-content">
-                    <a href=""><img src={Logo} alt="WanWan" /></a>
+                    <div className="header-left-container">
+                        <a href=""><img src={Logo} alt="WanWan" /></a>
+                    </div>
                     <div className="mid-header">
                         <h1>WAN WAN <span className="italic">CERAMICS</span></h1>
                         <p>A one liner outlining wan wan ceramics</p>

@@ -2,7 +2,7 @@
   position: relative;
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 #full-catalogue-container .products-container {
   display: flex;
@@ -48,7 +48,7 @@
     position: relative;
     -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
   #full-catalogue-container .products-container {
     display: flex;

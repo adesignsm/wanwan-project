@@ -47,16 +47,19 @@
     width: 100%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 690px) {
+@media only screen and (min-width: 320px) and (max-width: 690px) { //mobile
+    #about-container {
+        height: 100vh;
+    }
     
     .about-box-container {
         display: grid;
-        // grid-template-columns: 1fr;
-        height: auto; /* remove the fixed height */
+        grid-template-columns: 1fr;
+        height: 100%; 
     }
 
     .about-box-column {
-        width: 100%; /* take up the full width of the container */
+        width: 100%;
       }
 
     .mini-column {

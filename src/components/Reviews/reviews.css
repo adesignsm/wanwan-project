@@ -60,7 +60,20 @@
 @media only screen and (min-width: 320px) and (max-width: 690px) {
   #reviews-container .reviews {
     flex-direction: row;
-    align-items: center;
-    padding: 2.5rem;
+    align-items: start;
+  }
+  #reviews-container .reviews .review-row {
+    padding: 3rem;
+  }
+  #reviews-container .reviews .review-row .review-sub-row {
+    width: 100vw;
+  }
+  #reviews-container .reviews .review-row .review-sub-row .review-content {
+    padding: 1rem;
+  }
+  #reviews-container .review-counter {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0;
   }
 }/*# sourceMappingURL=reviews.css.map */
