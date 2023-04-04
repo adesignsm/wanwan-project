@@ -54,8 +54,14 @@
     
     .about-box-container {
         display: grid;
+<<<<<<< Updated upstream
         grid-template-columns: 1fr;
         height: 100%; 
+=======
+        // grid-template-columns: 1fr;
+        height: auto; /* remove the fixed height */
+        overflow: hidden;
+>>>>>>> Stashed changes
     }
 
     .about-box-column {

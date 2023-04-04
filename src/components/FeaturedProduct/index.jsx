@@ -27,6 +27,7 @@ const FeaturedProduct = () => {
 
     return (
         <div id="featured-product-container">
+            <div className="arrow"/>
             {collectionData.length > 0 &&
                 <div className="box-container">
                     <div className="box-column">
