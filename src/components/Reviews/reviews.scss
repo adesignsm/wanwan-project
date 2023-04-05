@@ -15,6 +15,7 @@
         h1 {
             margin: 0;
         }
+       
     }
 
     .reviews {
@@ -24,6 +25,7 @@
         width: 100vw;
         padding: 1rem 10rem;
         height: 100%;
+        cursor: url(../../assets/main-assets/dragRed.svg), default;
     }
 
     .reviews-container .review-counter h1 {

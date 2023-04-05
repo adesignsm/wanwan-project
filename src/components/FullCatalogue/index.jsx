@@ -1,4 +1,6 @@
-import React, {useLayoutEffect, useState} from "react";
+import React, {useLayoutEffect, useState, useEffect, useRef} from "react";
+import "jquery-ui-bundle";
+import $ from "jquery";
 import Client from "shopify-buy";
 import "./full-cat.css";
 
@@ -13,6 +15,27 @@ const client = Client.buildClient({
 
 const FullCatalogue = () => {
     const [productData, setProductData] = useState([]);
+    const containRef = useRef(null);
+
+
+    useEffect(()=>{
+
+        console.log("useEffect for draggable called");
+        
+        $(".products-container").draggable({
+        disabled: false,
+        axis: "x",
+        });
+
+        console.log("handleResize called");
+
+        if (window.innerWidth > 690) {
+        $(containRef.current).draggable({ axis: "x" });
+        } else {
+        $(containRef.current).draggable({ disabled: true });
+        }
+
+    },[]);
 
     useLayoutEffect(() => {
         client.product.fetchAll().then((products) => {
@@ -37,17 +60,18 @@ const FullCatalogue = () => {
     return (
         <>
             <div id="full-catalogue-container">
-                <div className="products-container">
+                {/* Draggable traget products-container */}
+                <div className="products-container" useRef={containRef}>
                     {productData.length > 0 &&
                         productData.map((product) => {
                             return (
-                                <div className="product-card">
-                                    <a href={product.onlineStoreUrl} target="_blank">
-                                        <img className="product-image" src={product.images[0].src} />
+                                <div className="product-card" useRef={containRef}>
+                                    <a href={product.onlineStoreUrl} target="_blank" >
+                                        <img className="product-image" src={product.images[0].src} alt=""/>
                                     </a>
                                     <h3 className="product-title">{product.title}</h3>
                                     <p className="product-description">{strTruncate(product.description, 200)}</p>
-                                    <a href={product.onlineStoreUrl} target="_blank">
+                                    <a href={product.onlineStoreUrl} target="_blank" >
                                         <button> BUY NOW </button>
                                     </a>
                                 </div>

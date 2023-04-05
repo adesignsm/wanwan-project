@@ -1,11 +1,14 @@
-import React, {useLayoutEffect, useState} from "react";
+import React, {useLayoutEffect, useState, useEffect, useRef} from "react";
 import "./reviews.css";
+import "jquery-ui-bundle";
+import $ from "jquery";
 
 const YOTPO_KEY = process.env.REACT_APP_YOTPO_API_KEY;
 const SECRET_KEY = process.env.REACT_APP_SECRET_API_KEY;
 
 const Reviews = () => {
     const [reviewData, setReviewData] = useState([]);
+    const containRef = useRef(null);
 
     const fetchReviewData = () => {
         const options = {
@@ -25,10 +28,30 @@ const Reviews = () => {
 
     console.log(reviewData)
 
+    useEffect(()=>{
+
+        console.log("useEffect for draggable called");
+        
+        $(".reviews").draggable({
+        disabled: false,
+        axis: "x",
+        });
+
+        console.log("handleResize called");
+
+        if (window.innerWidth > 690) {
+        $(containRef.current).draggable({ axis: "x" });
+        } else {
+        $(containRef.current).draggable({ disabled: true });
+        }
+
+    },[]);
+
+
     return (
         <>
             <div id="reviews-container">
-                <div className="review-counter">
+                <div className="review-counter" useRef={containRef}>
                     <h1> {reviewData.length} reviews </h1>
                 </div>
                 {reviewData.length > 0 &&
