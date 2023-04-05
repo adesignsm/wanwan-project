@@ -5,7 +5,7 @@
   overflow-y: hidden;
 }
 #full-catalogue-container .products-container {
-  cursor: url(../../assets/main-assets/dragRed.svg), auto;
+  cursor: url(../../assets/main-assets/redArrow.svg), auto;
   display: flex;
   flex-direction: row;
   padding: 15rem;

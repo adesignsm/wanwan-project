@@ -32,7 +32,7 @@ import torusBlushModel from "../../assets/model-assets/TorusBlush.glb";
 
       const Hero = () => {
         return (
-          <>
+          <section id="home">
             <div id="hero-container">
               <div id="hero-logo">
                 <object id="hero-logo-obj" data={backgroundLogo} type="image/svg+xml" aria-label="main logo" />
@@ -82,7 +82,7 @@ import torusBlushModel from "../../assets/model-assets/TorusBlush.glb";
                   </div>
               </div>
             </div>
-          </>
+          </section>
         );
       };
       

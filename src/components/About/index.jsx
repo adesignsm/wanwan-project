@@ -6,6 +6,8 @@ const About = () => {
    
 
     return (
+      <section id="about">
+
       <div id="about-container">
         <div className="about-box-container">
             <div className="about-box-column">
@@ -32,6 +34,7 @@ const About = () => {
             </div>
         </div>
       </div>
+      </section>
     )
 }
 

@@ -58,7 +58,7 @@ const FullCatalogue = () => {
     }
     
     return (
-        <>
+        <section id="gallery">
             <div id="full-catalogue-container">
                 {/* Draggable traget products-container */}
                 <div className="products-container" useRef={containRef}>
@@ -80,7 +80,7 @@ const FullCatalogue = () => {
                     }
                 </div>
             </div>  
-        </>
+        </section>
     )
 }
 

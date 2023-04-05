@@ -16,7 +16,7 @@ const Header = () => {
             let currentScrollPos = window.pageYOffset;
 
             if (prevScrollPos < currentScrollPos) {
-                $(".header-content").stop().animate({marginTop: "-15vh"}, 300);
+                $(".header-content").stop().animate({marginTop: "-18vh"}, 300);
             } else {
                 $(".header-content").stop().animate({marginTop: "0vh"}, 300);
             }

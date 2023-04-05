@@ -26,6 +26,8 @@ const FeaturedProduct = () => {
     }, []);
 
     return (
+        <section id="shop">
+
         <div id="featured-product-container">
             <div className="arrow"/>
             {collectionData.length > 0 &&
@@ -49,6 +51,7 @@ const FeaturedProduct = () => {
                 </div>
             }
         </div>
+     </section>
     );
 };
 
