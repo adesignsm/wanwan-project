@@ -32,7 +32,7 @@ const Reviews = () => {
 
         console.log("useEffect for draggable called");
         
-        $(".reviews").draggable({
+        $(".reviews-container").draggable({
         disabled: false,
         axis: "x",
         });
