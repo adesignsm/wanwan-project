@@ -19,9 +19,8 @@ const Menu = () => {
       </div>
       <ul className='links'>
       <li><a href="#home" onClick={handleLinkClick}>home</a></li>
-      <li><a href="#about" onClick={handleLinkClick}>about</a></li>
-      <li><a href="#gallery" onClick={handleLinkClick}>gallery</a></li>
-      <li><a href="#shop" onClick={handleLinkClick}>shop</a></li>
+      <li><a href="#about" onClick={handleLinkClick}>gallery</a></li>
+      <li><a href="#catalogue" onClick={handleLinkClick}>shop</a></li>
       </ul>
     </aside>
   );

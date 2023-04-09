@@ -10,6 +10,28 @@ const Reviews = () => {
     const [reviewData, setReviewData] = useState([]);
     const containRef = useRef(null);
 
+        useEffect(()=>{
+
+        console.log("useEffect for draggable called");
+        
+        $(".reviews-container").draggable({
+        disabled: false,
+        axis: "x",
+        });
+
+        if (window.innerWidth > 690) {
+        $(containRef.current).draggable({ axis: "x" });
+        // setIsDraggable(true);
+         console.log("isDraggable is true");
+        } else {
+        $(containRef.current).draggable({ disabled: true });
+        // setIsDraggable(false);
+         console.log("isDraggable is false");
+        }
+
+    },[]);
+
+
     const fetchReviewData = () => {
         const options = {
             method: 'GET',
@@ -28,24 +50,7 @@ const Reviews = () => {
 
     console.log(reviewData)
 
-    useEffect(()=>{
 
-        console.log("useEffect for draggable called");
-        
-        $(".reviews-container").draggable({
-        disabled: false,
-        axis: "x",
-        });
-
-        console.log("handleResize called");
-
-        if (window.innerWidth > 690) {
-        $(containRef.current).draggable({ axis: "x" });
-        } else {
-        $(containRef.current).draggable({ disabled: true });
-        }
-
-    },[]);
 
 
     return (

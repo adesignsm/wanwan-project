@@ -58,9 +58,11 @@ const FullCatalogue = () => {
     }
     
     return (
-        <section id="gallery">
+        <section id="catalogue">
             <div id="full-catalogue-container">
-                {/* Draggable traget products-container */}
+                <div className="full-catalogue-counter">
+                <h1>Full Catalogue</h1>
+                </div>
                 <div className="products-container" useRef={containRef}>
                     {productData.length > 0 &&
                         productData.map((product) => {
