@@ -12,21 +12,19 @@ const Reviews = () => {
 
         useEffect(()=>{
 
-        console.log("useEffect for draggable called");
+        console.log("Review for draggable called");
         
-        $(".reviews-container").draggable({
+        $(".draggable-box").draggable({
         disabled: false,
         axis: "x",
         });
 
+        console.log("Review handleResize called");
+
         if (window.innerWidth > 690) {
         $(containRef.current).draggable({ axis: "x" });
-        // setIsDraggable(true);
-         console.log("isDraggable is true");
         } else {
         $(containRef.current).draggable({ disabled: true });
-        // setIsDraggable(false);
-         console.log("isDraggable is false");
         }
 
     },[]);
@@ -56,12 +54,13 @@ const Reviews = () => {
     return (
         <>
             <div id="reviews-container">
-                <div className="review-counter" useRef={containRef}>
+                <div className="review-counter">
                     <h1> {reviewData.length} reviews </h1>
                 </div>
+                <div className="draggable-box" useRef={containRef}>
                 {reviewData.length > 0 &&
-                    <div className="reviews-container">
-                        <div className="reviews">
+                    <div className="reviews-container" >
+                        <div className="reviews" >
                             {reviewData.map((review) => {
                                 return (
                                     <div className="review-row">
@@ -83,7 +82,8 @@ const Reviews = () => {
                             })}
                         </div>
                     </div>
-                }
+                     }
+                </div>
             </div>
         </>
     )

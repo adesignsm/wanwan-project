@@ -20,14 +20,14 @@ const FullCatalogue = () => {
 
     useEffect(()=>{
 
-        console.log("useEffect for draggable called");
+        console.log("Catalogue for draggable called");
         
         $(".products-container").draggable({
         disabled: false,
         axis: "x",
         });
 
-        console.log("handleResize called");
+        console.log("Catalogue handleResize called");
 
         if (window.innerWidth > 690) {
         $(containRef.current).draggable({ axis: "x" });

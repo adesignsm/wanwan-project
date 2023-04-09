@@ -5,6 +5,10 @@
     position: relative;
     overflow-x: scroll;
 
+    #reviews-container::-webkit-scrollbar-thumb {
+        background-color: var(--clr-primary-4);
+      }
+
     .review-counter {
         position: sticky;
         left: 0;

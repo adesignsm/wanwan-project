@@ -5,6 +5,9 @@
   position: relative;
   overflow-x: scroll;
 }
+#reviews-container #reviews-container::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-4);
+}
 #reviews-container .review-counter {
   position: sticky;
   left: 0;

@@ -147,10 +147,20 @@
 
 
   @media only screen and (min-width: 320px) and (max-width: 690px) {
+
+    #footer-container {
+      h1 {
+        font-size: 2rem;
+        font-weight: 200;
+      }
+    }
+
     .footer-box-container {
     display: grid;
     grid-template-columns: 1fr;
+
     }
+
 
     .footer-left-column {
         width: 100%; /* for the first column */
