@@ -3,13 +3,16 @@ import "./header.css";
 import Logo from "../../assets/main-assets/loading-logo-original.svg"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useGlobalContext } from '../../utils/context';
-
 import $ from "jquery";
 
 const Header = () => {
     const { openMenu } = useGlobalContext();
 
     let prevScrollPos = window.pageYOffset;
+
+    // const handleMenuCick = () => {
+    //     $(".header-content").animate({marginTop: "-25vh"}, 300);
+    // }
 
     if (window.innerWidth >= 690) {
         window.onscroll = () => {
@@ -51,7 +54,8 @@ const Header = () => {
                         <p>A one liner outlining wan wan ceramics</p>
                     </div>
                     <div className="right-header">
-                        <button className="btn-toggle" onClick={openMenu}><RxHamburgerMenu/></button>
+                        <button className="btn-toggle" 
+                        onClick={()=>{openMenu();}}><RxHamburgerMenu/></button>
                     </div>
                 </div>
             </div>

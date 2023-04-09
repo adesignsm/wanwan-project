@@ -6,13 +6,23 @@ const AppProvider = ({ children }) => {
 
 // OPEN OR CLOSE SIDE MENU
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderOpen, setIsHeaderOpen] = useState(true);
   
   const openMenu = () => {
     setIsMenuOpen(true);
+    setIsHeaderOpen(false);
   };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+
+// HIDE OR UNHIDE HEADER
+
+const closeHeader = () => {
+  setIsHeaderOpen(false);
+};
 
   return (
     <AppContext.Provider
@@ -20,6 +30,8 @@ const AppProvider = ({ children }) => {
         isMenuOpen,
         openMenu,
         closeMenu,
+        isHeaderOpen,
+        closeHeader,
       }}
     >
       {children}
