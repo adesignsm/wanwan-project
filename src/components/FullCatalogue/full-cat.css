@@ -3,6 +3,7 @@
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 #full-catalogue-container .full-catalogue-counter {
   position: sticky;
@@ -61,6 +62,7 @@
     -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
     overflow-y: hidden;
+    overflow-x: scroll;
   }
   #full-catalogue-container .products-container {
     display: flex;

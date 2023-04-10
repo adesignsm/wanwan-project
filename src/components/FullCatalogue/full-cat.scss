@@ -2,6 +2,7 @@
         position: relative;
         backdrop-filter: blur(15px);
         overflow-y: hidden;
+        overflow-x: hidden;
 
         .full-catalogue-counter {
             position: sticky;
@@ -68,6 +69,7 @@
         position: relative;
         backdrop-filter: blur(15px);
         overflow-y: hidden;
+        overflow-x: scroll;
     
         .products-container {
             display: flex;

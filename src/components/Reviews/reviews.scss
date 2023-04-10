@@ -3,7 +3,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    overflow-x: scroll;
+    overflow-x: hidden;
 
     #reviews-container::-webkit-scrollbar-thumb {
         background-color: var(--clr-primary-4);
@@ -79,6 +79,10 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 690px) {
+    #reviews-container {
+        overflow-x: scroll;
+    }
+
     #reviews-container .reviews {
         flex-direction: row;
         align-items: start;
