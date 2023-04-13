@@ -1,6 +1,8 @@
 #featured-product-container {
+    
     h1 {
         font-weight: bolder;
+        font-family: 'inter';
     }
     
     h4, h3 {
@@ -12,12 +14,15 @@
     }
 }
 
+
 #featured-product-container {
     position: relative;
     height: 100vh;
     margin: 0;
     padding: 0;
 }
+
+
 
 .box-container {
     display: flex;

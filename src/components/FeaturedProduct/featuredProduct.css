@@ -1,5 +1,6 @@
 #featured-product-container h1 {
   font-weight: bolder;
+  font-family: "inter";
 }
 #featured-product-container h4, #featured-product-container h3 {
   color: var(--clr-primary-5);

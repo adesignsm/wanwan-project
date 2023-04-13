@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './menu.css';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../../../../utils/context';
@@ -9,10 +9,23 @@ const Menu = () => {
 
   const handleMenuClick = () => {
     closeMenu();
-    // const headerContent = document.querySelector(".header-content");
-    // $(headerContent).animate({marginTop: "0vh" }, 300);
-
 };
+
+  const handleMouseUp = (event) => {
+
+    if (!event.target.closest('.sidebar')) {
+      closeMenu();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, []);
+
+
 
   return (
     <aside className={`${isMenuOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>

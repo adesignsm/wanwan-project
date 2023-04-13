@@ -50,7 +50,7 @@ const Footer = () => {
                             <div className="copyright__content">
                                 © 2023, 
                             <a href="www.wanwan.ca" target="_blank"> Wan Wan. </a>
-                            <a href="https://hexstudio.io" target="_blank"> Built by hexstudio </a>
+                            <a href="https://hexstudio.io" target="_blank"> Built by Hexstudio </a>
                             </div>
             </div>
         </>

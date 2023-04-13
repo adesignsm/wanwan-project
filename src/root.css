@@ -82,6 +82,7 @@ h5 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-primary-4);
+  font-family: "karla";
 }
 
 @media screen and (min-width: 800px) {

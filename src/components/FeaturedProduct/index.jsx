@@ -1,10 +1,15 @@
 import React, {useLayoutEffect, useState} from "react";
+import { Canvas } from "@react-three/fiber";
+import { Environment, OrbitControls } from "@react-three/drei";
+import { useGLTF, OrthographicCamera } from "@react-three/drei";
+import torusBlushModel from "../../assets/model-assets/TorusBlush.glb";
 import "./featuredProduct.css";
-
 import Client from "shopify-buy";
 
-const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
 
+
+
+const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
 const client = Client.buildClient({
     domain: "itisstillgood.myshopify.com",
     storefrontAccessToken: SHOPIFY_KEY

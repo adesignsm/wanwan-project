@@ -1,7 +1,7 @@
 
 .sidebar-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 1rem 1.5rem;
 }
@@ -14,7 +14,7 @@
   cursor: pointer;
   color: var(--clr-primary-1);
   margin-top: 0.2rem;
-  z-index: 9;
+
 }
 
 
@@ -69,6 +69,7 @@
 
 .sidebar {
   position: fixed;
+  z-index: 99;
   top: 0;
   right: 0;
   width: 100%;
