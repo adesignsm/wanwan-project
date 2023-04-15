@@ -10,9 +10,6 @@ const Header = () => {
 
     let prevScrollPos = window.pageYOffset;
 
-    // const handleMenuCick = () => {
-    //     $(".header-content").animate({marginTop: "-25vh"}, 300);
-    // }
 
     if (window.innerWidth >= 690) {
         window.onscroll = () => {

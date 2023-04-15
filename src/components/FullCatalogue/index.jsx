@@ -40,7 +40,7 @@ const FullCatalogue = () => {
     useLayoutEffect(() => {
         client.product.fetchAll().then((products) => {
             setProductData(products);
-            // console.log(client);
+            console.log(client);
         }).catch((err) => {
             console.error(err);
         })

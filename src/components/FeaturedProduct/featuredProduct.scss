@@ -3,6 +3,8 @@
     h1 {
         font-weight: bolder;
         font-family: 'inter';
+        text-align: center;
+        padding-bottom: 2rem;
     }
     
     h4, h3 {
@@ -61,6 +63,16 @@
         }
     }
 }
+    
+.arrow-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
 
 .btn {
     background-color: var(--clr-primary-5);
@@ -70,6 +82,24 @@
     width: 220px;
     height: 45px;
     cursor: pointer;
+}
+
+.prev-btn,
+.next-btn {
+    position: relative;
+    z-index: 100;
+  color: var(--clr-primary-7);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--clr-primary-5);
 }
 
 
@@ -85,6 +115,28 @@
         width: 90vw;
         border-radius: 15px;
         text-align: center;
+
+        .arrow-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 35%;
+        width: 100%;
+        padding: 0 1rem;
+        }
+
+        .prev-btn,
+        .next-btn {
+            position: static;
+        }
+
+        .prev-btn {
+            left: 0;
+        }
+
+        .next-btn {
+            right: 0;
+        }
 
         .box-container {
             display: grid;
