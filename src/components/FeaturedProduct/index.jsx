@@ -5,6 +5,7 @@ import Client from "shopify-buy";
 
 
 const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
+
 const client = Client.buildClient({
     domain: "itisstillgood.myshopify.com",
     storefrontAccessToken: SHOPIFY_KEY
