@@ -4,7 +4,7 @@
         font-weight: bolder;
         font-family: 'inter';
         text-align: center;
-        padding-bottom: 2rem;
+        padding: 1rem;
     }
     
     h4, h3 {
@@ -18,8 +18,9 @@
 
 
 #featured-product-container {
+
     position: relative;
-    height: 100vh;
+    // height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -105,16 +106,18 @@
 
 
 @media only screen and (min-width: 320px) and (max-width: 690px) {
-    .box-container {
-      grid-template-columns: 1fr;
-    }
+
 
     #featured-product-container {
-        margin-top: 10rem;
+        margin-top: 2rem;
         height: 100%;
-        width: 90vw;
+        // width: 90vw;
         border-radius: 15px;
         text-align: center;
+
+        h1 {
+            text-align: center;
+        }
 
         .arrow-container {
         display: flex;
@@ -140,6 +143,7 @@
 
         .box-container {
             display: grid;
+            grid-template-columns: 1fr;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             -webkit-backdrop-filter: blur(15px);
