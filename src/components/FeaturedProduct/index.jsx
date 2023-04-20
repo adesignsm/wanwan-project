@@ -1,8 +1,8 @@
-import React, {useLayoutEffect, useState, useRef, Suspense} from "react";
+import React, {useLayoutEffect, useState} from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./featuredProduct.css";
-import Client from "shopify-buy";
 
+import Client from "shopify-buy";
 
 const SHOPIFY_KEY = process.env.REACT_APP_API_KEY;
 
@@ -12,97 +12,70 @@ const client = Client.buildClient({
 });
 
 const FeaturedProduct = () => {
+    const [collectionData, setCollectionData] = useState([]);
+    
+    useLayoutEffect(() => {
+        client.collection.fetchAllWithProducts().then((collections) => {
+            collections.forEach((collection) => {
+                if (collection.title === "Featured Products") {
+                    setCollectionData(collection.products);
+                }
+            })
+        }).catch((err) => {
+            console.log(err);
+        })
+    }, []);
 
-const [collectionData, setCollectionData] = useState([]);
-const [index, setIndex] = useState(1);
+    const [activeImage, setActiveImage] = useState(0);
 
-useLayoutEffect(() => {
+    const nextImage = () => {
+      setActiveImage((activeImage + 1) % collectionData[0].images.length);
+    };
+  
+    const prevImage = () => {
+      setActiveImage(
+        (activeImage + collectionData[0].images.length - 1) %
+          collectionData[0].images.length
+      );
+    };
 
-    client.product.fetchAll().then((products) => {
-        setCollectionData(products);
-        console.log(products);
-    }).catch((err) => {
-        console.error(err);
-    })
-}, []);
 
-const checkNumber = (number) => {
-    if (number > collectionData.length -1 ) {
-        return 0;
-    }
-    if (number < 0) {
-        return collectionData.length - 1;
-    }
-    return number;
-}
-
-const nextProduct = () => {
-    setIndex(()=>{
-        let newIndex = index + 1;
-        return checkNumber(newIndex);
-    })
-};
-
-const prevProduct = () => {
-    setIndex(() => {
-        let newIndex = index - 1;
-        return checkNumber(newIndex);
-    })
-}
-
-const currentProduct = collectionData[index] || {};
-
-    return(
-   
- <section id="shop">
+    return (
+        <section id="shop">
 
         <div id="featured-product-container">
-            <h1>Featured Product</h1>
-          {collectionData.length > 0 && (
-            <div className="box-container">
-              <div className="box-column">
-                <img
-                  className="featured-product-image"
-                  src={currentProduct.images?.[0]?.src}
-                  alt="product image"
-                />
-              </div>
-  
-              <div className="box-column">
-                <div className="primary-product-info">
-                  <h1>{currentProduct.title}</h1>
-                  <h4
-                    dangerouslySetInnerHTML={{
-                        __html: currentProduct.descriptionHtml,
-                    }}
-                  />
-                </div>
-  
-                <div className="secondary-product-info">
-                  <a
-                    href={currentProduct.onlineStoreUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="btn">BUY NOW</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
-                    <div className="arrow-container">
-                      <button className="prev-btn" onClick={prevProduct}>
+            {collectionData.length > 0 &&
+                <div className="box-container">
+                    <div className="box-column">
+                        <img  className="featured-product-image" src={collectionData[0].images[activeImage].src} alt="product image"/>
+                        <div className="arrow-container">
+                      <button className="prev-btn" onClick={prevImage}>
                         <FaChevronLeft />
                       </button>
-                      <button className="next-btn" onClick={nextProduct}>
+                      <button className="next-btn" onClick={nextImage}>
                         <FaChevronRight />
                       </button>
                       </div>
+                    </div>
+
+                    <div className="box-column">
+                        <div className="primary-product-info">
+                            <h1>{collectionData[0].title}</h1>
+                            <h4 dangerouslySetInnerHTML={{__html: collectionData[0].descriptionHtml}} />
+                        </div>
+
+                        <div className="secondary-product-info">
+                            <a href={collectionData[0].onlineStoreUrl} target="_blank">
+                                <button className="btn">BUY NOW</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+              
         </div>
-      </section>
-                  
+     </section>
     );
 };
-
 
 export default FeaturedProduct;
