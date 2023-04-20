@@ -4,27 +4,38 @@
   left: 0;
   opacity: 0.5;
 }
+
 #hero-logo object {
   width: 100vw;
 }
 
 #hero-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
   margin-top: 0vh;
   padding: 1rem 7rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .models-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 10rem;
 }
 
 .model-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 50vh;
 }
 
@@ -40,9 +51,11 @@
 
 @media only screen and (min-width: 691px) and (max-width: 1600px) {
   #hero-container {
+    display: -ms-grid;
     display: grid;
   }
   #hero-canvas-container {
+    display: -ms-grid;
     display: grid;
   }
   .hero-description-column {
@@ -54,27 +67,32 @@
   }
   .models-container {
     grid-column-gap: 0;
-    grid-template-rows: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[1];
+        grid-template-rows: repeat(1, 1fr);
   }
 }
+
 @media only screen and (min-width: 320px) and (max-width: 690px) {
   .header-content a {
     margin-top: 1rem;
   }
   #hero-container {
+    display: -ms-grid;
     display: grid;
     padding: 1rem;
     margin-bottom: 5rem;
     margin-top: 0;
+    height: 100%;
   }
   #hero-container #hero-logo {
     top: 10vh;
   }
   .models-container {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   #hero-canvas-container .models-container .model-column:nth-child(1) {
-    height: 50vh;
+    height: calc(100vh / 2);
   }
   #hero-canvas-container .models-container .model-column:nth-child(2),
   #hero-canvas-container .models-container .model-column:nth-child(3) {
@@ -89,4 +107,5 @@
     padding: 1rem;
     margin: 0;
   }
-}/*# sourceMappingURL=hero.css.map */
+}
+/*# sourceMappingURL=hero.css.map */
