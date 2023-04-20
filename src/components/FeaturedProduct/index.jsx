@@ -44,6 +44,7 @@ const FeaturedProduct = () => {
         <section id="shop">
 
         <div id="featured-product-container">
+            <h1>Featured Product</h1>
             {collectionData.length > 0 &&
                 <div className="box-container">
                     <div className="box-column">

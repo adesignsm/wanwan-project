@@ -5,75 +5,57 @@
   position: relative;
   overflow-x: hidden;
 }
-
 #reviews-container #reviews-container::-webkit-scrollbar-thumb {
   background-color: var(--clr-primary-4);
 }
-
 #reviews-container .review-counter {
-  position: -webkit-sticky;
   position: sticky;
   left: 0;
   top: 0;
   padding: 5rem 10rem;
   text-align: center;
 }
-
 #reviews-container .review-counter h1 {
   margin: 0;
 }
-
 #reviews-container .reviews {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 4rem;
   width: 100vw;
   padding: 1rem 10rem;
   height: 100%;
   cursor: url(../../assets/main-assets/redArrow.svg), default;
 }
-
 #reviews-container .reviews-container .review-counter h1 {
   margin-top: 0;
   margin-bottom: 5rem;
   text-align: center;
   text-transform: uppercase;
 }
-
 #reviews-container .review-title {
   text-transform: uppercase;
   font-weight: 900;
 }
-
 #reviews-container .review-row {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
   width: 100%;
   padding: 1rem 3rem;
 }
-
 #reviews-container .review-row .review-content {
   text-transform: none;
 }
-
 #reviews-container .review-row .review-sub-row {
   margin: 3rem 0rem;
   font-family: "Karla", sans-serif;
 }
-
 #reviews-container .review-row label {
   color: var(--clr-primary-4);
 }
-
 #reviews-container .review-row:last-child p {
   margin-bottom: 0;
 }
-
 #reviews-container .review-sub-row h1, #reviews-container .review-sub-row h3, #reviews-container .review-sub-row h2 {
   margin-top: 0;
 }
@@ -83,13 +65,8 @@
     overflow-x: scroll;
   }
   #reviews-container .reviews {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    flex-direction: row;
+    align-items: start;
   }
   #reviews-container .reviews .review-row {
     padding: 3rem;
@@ -104,5 +81,4 @@
     margin-bottom: 3rem;
     padding: 0;
   }
-}
-/*# sourceMappingURL=reviews.css.map */
+}/*# sourceMappingURL=reviews.css.map */
