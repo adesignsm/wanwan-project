@@ -109,6 +109,8 @@ p {
   h3,
   h4 {
     line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.1em;
   }
 }
 /*  global classes */

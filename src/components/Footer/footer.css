@@ -135,9 +135,7 @@ textarea::placeholder {
 }
 .copyright__content a {
   text-decoration: none;
-}
-.copyright__content a:link {
-  color: black;
+  color: #000;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 690px) {
