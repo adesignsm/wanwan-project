@@ -69,7 +69,7 @@ const FullCatalogue = () => {
                             return (
                                 <div className="product-card" useRef={containRef}>
                                     <a href={product.onlineStoreUrl} target="_blank" >
-                                        <img className="product-image" src={product.images[0].src} alt=""/>
+                                        <img className="product-image" src={product.images[0].src} alt="product"/>
                                     </a>
                                     <h3 className="product-title">{product.title}</h3>
                                     <p className="product-description">{strTruncate(product.description, 200)}</p>

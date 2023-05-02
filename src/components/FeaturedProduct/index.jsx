@@ -50,10 +50,10 @@ const FeaturedProduct = () => {
                     <div className="box-column">
                         <img  className="featured-product-image" src={collectionData[0].images[activeImage].src} alt="product image"/>
                         <div className="arrow-container">
-                      <button className="prev-btn" onClick={prevImage}>
+                      <button className="prev-btn" onClick={prevImage} aria-label="Prev Button">
                         <FaChevronLeft />
                       </button>
-                      <button className="next-btn" onClick={nextImage}>
+                      <button className="next-btn" onClick={nextImage} aria-label="Back Button">
                         <FaChevronRight />
                       </button>
                       </div>

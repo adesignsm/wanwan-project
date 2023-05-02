@@ -33,7 +33,7 @@ const Menu = () => {
   return (
     <aside className={`${isMenuOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
       <div className='sidebar-header'>
-        <button className='close-btn' onClick={handleMenuClick}>
+        <button className='close-btn' aria-label="Hamburger Button" onClick={handleMenuClick} >
           <FaTimes />
         </button>
       </div>

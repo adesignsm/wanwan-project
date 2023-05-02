@@ -40,19 +40,7 @@ const Instagram = () => {
     }
 
     useEffect(() => {
-      // const userFeed = new Instafeed({
-      //   get: 'user',
-      //   limit: 24,
-      //   target: "instagram-container",
-      //   resolution: 'low_resolution',
-      //   accessToken: process.env.REACT_APP_INSTA_TOKEN,
-      //   template:
-      //   '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>',
-      // });
-      // userFeed.run();
 
-      //I call the data sorting function here
-      //setTimeout is used for userFeed.run to complete before calling sortFeedData
 
       setTimeout(() => {
         sortFeedData();
@@ -128,30 +116,30 @@ const Instagram = () => {
               
               <div className="wrapper">
                 <div id="test-container">
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
-                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto" /></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
+                  <div className="feed-item"><a href="https://wwww.google.ca" target="_blank"><img src="https://plus.unsplash.com/premium_photo-1663013080777-11e6f7bc63b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="foto"/></a></div>
                 </div>
               </div>
         </> 
