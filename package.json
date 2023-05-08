@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "gsap": "^3.11.4",
+    "i18next": "^22.4.15",
     "infiniteslidev2": "^2.0.1-1",
     "instafeed.js": "^2.0.0",
     "install": "^0.13.0",

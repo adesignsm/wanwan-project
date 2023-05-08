@@ -51,8 +51,7 @@ const Header = () => {
                         <p>A one liner outlining wan wan ceramics</p>
                     </div>
                     <div className="right-header">
-                        <button className="btn-toggle" 
-                        onClick={()=>{openMenu();}}><RxHamburgerMenu/></button>
+                        <button className="btn-toggle" onClick={()=>{openMenu();}}><RxHamburgerMenu/></button>
                     </div>
                 </div>
             </div>

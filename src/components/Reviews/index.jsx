@@ -11,15 +11,11 @@ const Reviews = () => {
     const containRef = useRef(null);
 
         useEffect(()=>{
-
-        console.log("Review for draggable called");
         
         $(".draggable-box").draggable({
         disabled: false,
         axis: "x",
         });
-
-        console.log("Review handleResize called");
 
         if (window.innerWidth > 690) {
         $(containRef.current).draggable({ axis: "x" });
@@ -46,7 +42,6 @@ const Reviews = () => {
        fetchReviewData();
     }, []);
 
-    console.log(reviewData)
 
 
 

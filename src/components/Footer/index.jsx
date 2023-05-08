@@ -31,15 +31,7 @@ const Footer = () => {
                             <div>
                         <ul>
                             <li><a href="#">INSTRAGRAM</a></li>
-                            <li><a href="#">FACEBOOK</a></li>
                             <li><a href="#">FAQ</a></li>
-                            <li><a href="#">ACCESSIBILITY</a></li>
-                        </ul>
-                            </div>
-                            <div>
-                        <ul>
-                            <li><a href="#">TERMS & CONDITIONS</a></li>
-                            <li><a href="#">PRIVACY POLICY</a></li>
                             <li><a href="#">WHOLESALE</a></li>
                             <li><a href="#">CONTACT</a></li>
                         </ul>

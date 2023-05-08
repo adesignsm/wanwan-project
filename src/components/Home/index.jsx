@@ -7,13 +7,14 @@ import FullCatalogue from "../FullCatalogue";
 import Reviews from "../Reviews";
 
 const Home = () => {
+
     return (
         <>
-            <Hero />
+            {<Hero />}
             <FeaturedProduct />
             <FullCatalogue />
             <About />
-            <Testimonials />
+            {/* <Testimonials /> */}
             <Reviews />
             <Footer />
         </>
